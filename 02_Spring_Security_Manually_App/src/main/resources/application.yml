@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: 02_Spring_Security_Manually_App
+    security:
+        user:
+            name: Raj
+            password: Raj@123

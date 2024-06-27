@@ -1,0 +1,30 @@
+create database SBMS;
+use SBMS;
+CREATE TABLE `users` (
+                         `username` VARCHAR(50) NOT NULL,
+                         `password` VARCHAR(120) NOT NULL,
+                         `enabled` TINYINT(1) NOT NULL,
+                         PRIMARY KEY (`username`)
+);
+
+CREATE TABLE `authorities` (
+                               `username` VARCHAR(50) NOT NULL,
+                               `authority` VARCHAR(50) NOT NULL,
+                               KEY `username` (`username`),
+                               CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`)
+                                   REFERENCES `users` (`username`)
+);
+
+insert into users values ('Raj', '$2a$12$qHtYFHHKZUp1QVD2KPhkT.spmpgVv7CWV8miRzWyX4SgTji3tqqZa',  1);
+insert into users values ('User', '$2a$12$C5Cn5cS37lxH/BrUmqtPle18BEDFxfLVpiUkxzi1fAl/kD/9xrlZy',  1);
+
+
+insert into authorities values ('Raj', 'ROLE_ADMIN');
+insert into authorities values ('Raj', 'ROLE_USER');
+insert into authorities values ('user', 'ROLE_USER');
+
+select *
+from users;
+
+select *
+from authorities;

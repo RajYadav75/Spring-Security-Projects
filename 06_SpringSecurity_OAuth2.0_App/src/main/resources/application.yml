@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: 06_SpringSecurity_OAuth2.0_App
+    security:
+        oauth2:
+            client:
+                registration:
+                    github:
+                        clientId:
+                        clientSecret:

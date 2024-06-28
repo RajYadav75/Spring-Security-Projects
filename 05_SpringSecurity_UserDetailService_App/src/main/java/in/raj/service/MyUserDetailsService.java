@@ -12,9 +12,10 @@ import java.util.Collections;
 public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        //Logic to get user Data
-                                // userRepo.findByUsername(name);
+        System.out.println("loadUserByUsername method is called  :: ->    (:    ");
+        /*Logic to get user Data
+                                this is come when we connect database connection userRepo.findByUsername(name);*/
 
-        return new User("raj","raj@123", Collections.emptyList());
+        return new User("Raj","Raj@123", Collections.emptyList());
     }
 }

@@ -12,7 +12,7 @@ public class MsgRestController {
 
     @GetMapping("/welcome")
     public String welcomeMsg(){
-        return "Swagat hai aap mere application par Raj :) ";
+        return "Swagat hai aapka mere application par Raj :) ";
     }
     @GetMapping("/contact")
     public String contact(){
